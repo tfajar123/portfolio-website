@@ -1,23 +1,40 @@
 <template>
-  <div class="main__container">
-    <div class="left__side">
-      <h1>
-        Hello, I'm a <span>programmer</span> and
-        <span>fullstack developer</span>
-      </h1>
-      <p>
-        I'm a passionate developer and I'm always looking for new challenges
-      </p>
-      <button>Contact me</button>
-    </div>
-    <div class="right__side">
-      <img src="~/assets/img/hero.png" alt="yahaha" />
-      <img src="~/assets/img/dots.png" alt="dots" />
-      <img src="~/assets/img/shapes.png" alt="shapes" />
-    </div>
+  <div class="wrapper">
+    <IndexHero />
+    <IndexQuote />
+    <IndexWorks />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  title: 'Home',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Home page',
+    },
+  ],
+});
+</script>
 
-<style scoped></style>
+<style scoped>
+.wrapper {
+  width: 100%;
+  max-height: 70vh;
+  padding: 0 10rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .wrapper {
+    padding: 0 5rem 0 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 5rem 2rem 0 2rem;
+  }
+}
+</style>

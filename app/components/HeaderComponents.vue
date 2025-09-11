@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-const notMobile = ref(window.innerWidth > 500);
+const notMobile = ref(true);
 const isOpen = ref(false);
 
 function handleMenu() {
@@ -49,6 +49,8 @@ function handleResize() {
 }
 
 onMounted(() => {
+  notMobile.value = window.innerWidth > 500;
+
   window.addEventListener('resize', handleResize);
 });
 
@@ -86,9 +88,6 @@ onBeforeMount(() => {
 
 .nav__item .active {
   color: white;
-}
-span {
-  color: var(--purple-color);
 }
 
 .burger__menu {

@@ -2,10 +2,7 @@
   <div>
     <HeaderComponents />
 
-    <div class="main__container">
-      <slot />
-    </div>
-    <FooterComponents />
+    <slot />
   </div>
 </template>
 
@@ -33,8 +30,13 @@ a {
   text-decoration: none;
   color: var(--gray-color);
 }
+span {
+  color: var(--purple-color);
+}
 
 body {
   font-family: 'Fira Code', monospace;
+  background-color: var(--bg-color);
+  color: var(--white-color);
 }
 </style>
