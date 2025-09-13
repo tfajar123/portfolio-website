@@ -13,8 +13,8 @@
     <div class="right__side">
       <div class="image__hero">
         <img src="~/assets/img/hero.png" alt="yahaha" class="hero" />
-        <img src="~/assets/img/dots.png" alt="dots" class="dots" />
-        <img src="~/assets/img/dots.png" alt="shapes" class="shapes" />
+        <img src="~/assets/img/Dots.png" alt="dots" class="dots" />
+        <img src="~/assets/img/Dots.png" alt="shapes" class="shapes" />
       </div>
     </div>
   </section>
