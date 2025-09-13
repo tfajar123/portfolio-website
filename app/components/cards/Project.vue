@@ -1,6 +1,6 @@
 <template>
   <div class="card__container">
-    <div class="card__img">
+    <div v-if="image" class="card__img">
       <img :src="image" alt="asdasd" />
     </div>
     <div class="card__tags">{{ tags }}</div>
@@ -8,8 +8,8 @@
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
       <div class="button">
-        <NuxtLink to="/works">See more</NuxtLink>
-        <a href="github.com/tfajar123" target="_blank">Github</a>
+        <NuxtLink to="/projects">See more</NuxtLink>
+        <a href="#">Github</a>
       </div>
     </div>
   </div>

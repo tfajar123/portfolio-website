@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <TitleSection title="about-me" />
+    <TitleSection v-if="showTitle" title="about-me" />
     <div class="about__container">
       <div class="about__content">
         <p>Hello, I'm Taufik Fajar!</p>
@@ -17,7 +17,7 @@
           a job; it's a creative outlet where I can build meaningful experiences
           for users.
         </p>
-        <NuxtLink to="/about"
+        <NuxtLink v-if="showButton" to="/about"
           >Read More <Icon name="mdi:arrow-right"
         /></NuxtLink>
       </div>
@@ -28,7 +28,12 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+  showTitle: { type: Boolean, default: true },
+  showButton: { type: Boolean, default: true },
+});
+</script>
 
 <style scoped>
 .about__container {
@@ -76,6 +81,7 @@ span {
   width: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .about__img img {

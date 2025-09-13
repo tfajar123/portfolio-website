@@ -1,9 +1,17 @@
 <template>
   <section class="projects">
-    <TitleSection title="works" link="/works" />
+    <TitleSection v-if="showTitle" title="projects" link="/projects" />
     <div class="projects__container">
       <CardsProject
-        v-for="(project, i) in projects"
+        v-for="(project, i) in showAllIndex ? projects : projects.slice(0, 3)"
+        :key="i"
+        v-bind="project"
+      />
+    </div>
+    <TitleSection v-if="showAllIndex" title="backend" />
+    <div v-if="showAllIndex" class="projects__container">
+      <CardsProject
+        v-for="(project, i) in backendProjects"
         :key="i"
         v-bind="project"
       />
@@ -12,6 +20,10 @@
 </template>
 
 <script setup>
+defineProps({
+  showTitle: { type: Boolean, default: true },
+  showAllIndex: { type: Boolean, default: false },
+});
 const projects = [
   {
     title: 'Fake News Detection',
@@ -30,6 +42,41 @@ const projects = [
     tags: 'Laravel, MySQL',
     description: 'E-commerce Guitar & Tabs Store',
     image: '/assets/img/Projects3.jpg',
+  },
+  {
+    title: 'Positivus Landing Page',
+    tags: 'Vue JS',
+    description: 'Implementation of Positivus Landing Page Figma Design',
+    image: '/assets/img/Projects4.png',
+  },
+  {
+    title: 'Restaurant Management System',
+    tags: 'Vue JS, .NET Framework, SQL Server',
+    description: 'Food Ordering System',
+    image: '/assets/img/Projects5.png',
+  },
+];
+
+const backendProjects = [
+  {
+    title: 'SQLC Gin',
+    tags: 'Go, PostgreSQL',
+    description: 'Build GO REST API with Gin, SQLC and PostgreSQL',
+  },
+  {
+    title: 'Anime Streaming API',
+    tags: 'Go, PostgreSQL',
+    description: 'API for Anime Streaming Platform',
+  },
+  {
+    title: 'Mangofusion API',
+    tags: '.NET Framework 9, SQL Server',
+    description: 'API for Restaurant Management System',
+  },
+  {
+    title: 'Event API',
+    tags: 'Laravel, MySQL',
+    description: 'Event Management System',
   },
 ];
 </script>

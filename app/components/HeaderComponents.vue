@@ -1,7 +1,7 @@
 <template>
   <div class="nav__container">
     <div class="nav__logo">
-      <NuxtLink to="/">TFM</NuxtLink>
+      <NuxtLink to="/"><img src="~/assets/img/logo.png" alt="logo" /></NuxtLink>
     </div>
     <Transition name="fade">
       <div
@@ -15,18 +15,18 @@
           >
         </div>
         <div class="nav__item">
-          <NuxtLink to="/works" active-class="active" @click="handleMenu"
-            ><span>#</span>works</NuxtLink
+          <NuxtLink to="/projects" active-class="active" @click="handleMenu"
+            ><span>#</span>projects</NuxtLink
           >
         </div>
         <div class="nav__item">
           <NuxtLink to="/about" active-class="active" @click="handleMenu"
-            ><span>#</span>about-me</NuxtLink
+            ><span>#</span>about</NuxtLink
           >
         </div>
         <div class="nav__item">
           <NuxtLink to="/contacts" active-class="active" @click="handleMenu"
-            ><span>#</span>contact-me</NuxtLink
+            ><span>#</span>contacts</NuxtLink
           >
         </div>
         <div class="nav__item switch">
@@ -91,6 +91,10 @@ onBeforeMount(() => {
 }
 .nav__logo a {
   color: var(--primary-color);
+}
+.nav__logo img {
+  width: 3rem;
+  height: 3rem;
 }
 
 .nav__link {

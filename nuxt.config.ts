@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     head: {
       title: 'TFM',
       meta: [{ name: 'description', content: 'My Portfolio website' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }],
     },
   },
 });

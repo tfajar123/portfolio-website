@@ -8,7 +8,7 @@
       <p>
         I'm a passionate developer and I'm always looking for new challenges
       </p>
-      <button>Contact me</button>
+      <button @click="$router.push('/contacts')">Contact me</button>
     </div>
     <div class="right__side">
       <div class="image__hero">

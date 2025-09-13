@@ -4,7 +4,9 @@
       <div class="footer_left">
         <div class="footer__logo-email">
           <div class="footer__logo">
-            <NuxtLink to="/">TFM</NuxtLink>
+            <NuxtLink to="/"
+              ><img src="~/assets/img/logo.png" alt="logo"
+            /></NuxtLink>
           </div>
           <div class="footer__email">
             <a href="mailto:tfajar321321@gmail.com">tfajar321321@gmail.com</a>
@@ -61,6 +63,11 @@ footer {
 .footer__logo-email {
   display: flex;
   gap: 2rem;
+}
+
+.footer__logo-email img {
+  width: 2rem;
+  height: 2rem;
 }
 
 .footer__job {

@@ -29,7 +29,7 @@ defineProps({
 
 .title-line {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 2fr 5fr;
   align-items: center;
   gap: 1rem;
 }

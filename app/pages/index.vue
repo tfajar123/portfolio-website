@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div>
     <IndexHero />
     <IndexQuote />
     <IndexWorks />
@@ -22,22 +22,4 @@ useHead({
 });
 </script>
 
-<style scoped>
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 10rem;
-}
-
-@media screen and (max-width: 1500px) {
-  .wrapper {
-    padding: 0 5rem 0 5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    padding: 5rem 2rem 0 2rem;
-  }
-}
-</style>
+<style scoped></style>
