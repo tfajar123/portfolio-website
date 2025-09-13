@@ -28,14 +28,14 @@ defineProps({
 .card__container {
   width: 30rem;
   height: auto;
-  border: solid 1px var(--gray-color);
+  border: solid 1px var(--secondary-color);
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .card__container:hover {
-  border: 1px solid var(--purple-color);
+  border: 1px solid var(--span-color);
 }
 
 .card__img {
@@ -51,22 +51,22 @@ img {
 }
 
 .card__tags {
-  border-top: 1px solid var(--gray-color);
-  border-bottom: 1px solid var(--gray-color);
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
   padding: 0.5rem;
-  color: var(--gray-color);
+  color: var(--secondary-color);
 }
 .card__content {
   padding: 0.5rem 1rem;
 }
 
 .card__content h1 {
-  color: var(--white-color);
+  color: var(--primary-color);
   font-size: 1.5rem;
 }
 
 .card__content p {
-  color: var(--gray-color);
+  color: var(--secondary-color);
   font-size: 1rem;
   padding: 1rem 0;
 }
@@ -79,16 +79,16 @@ img {
 }
 
 .button a {
-  color: var(--white-color);
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--primary-color);
   transition: all 0.3s ease-in-out;
 }
 
 .button a:hover {
-  background-color: var(--purple-color);
-  border: 1px solid var(--purple-color);
+  background-color: var(--span-color);
+  border: 1px solid var(--span-color);
 }
 </style>

@@ -3,6 +3,9 @@
     <IndexHero />
     <IndexQuote />
     <IndexWorks />
+    <IndexSkills />
+    <IndexAbout />
+    <IndexContact />
   </div>
 </template>
 
@@ -22,7 +25,7 @@ useHead({
 <style scoped>
 .wrapper {
   width: 100%;
-  max-height: 70vh;
+  min-height: 100vh;
   padding: 0 10rem;
 }
 

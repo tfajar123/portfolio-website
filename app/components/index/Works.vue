@@ -1,12 +1,6 @@
 <template>
   <section class="projects">
-    <div class="projects__title">
-      <div class="title-line">
-        <h1><span>#</span>projects</h1>
-        <div class="line"></div>
-      </div>
-      <NuxtLink to="/works">See more <Icon name="mdi:arrow-right" /></NuxtLink>
-    </div>
+    <TitleSection title="works" link="/works" />
     <div class="projects__container">
       <CardsProject
         v-for="(project, i) in projects"
@@ -61,7 +55,7 @@ const projects = [
 .line {
   width: 100%;
   height: 2px;
-  background-color: var(--purple-color);
+  background-color: var(--span-color);
 }
 
 @media screen and (max-width: 1350px) {

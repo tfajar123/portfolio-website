@@ -14,7 +14,7 @@
       <div class="image__hero">
         <img src="~/assets/img/hero.png" alt="yahaha" class="hero" />
         <img src="~/assets/img/dots.png" alt="dots" class="dots" />
-        <img src="~/assets/img/shapes.png" alt="shapes" class="shapes" />
+        <img src="~/assets/img/dots.png" alt="shapes" class="shapes" />
       </div>
     </div>
   </section>
@@ -36,28 +36,29 @@
 .left__side h1 {
   font-size: 3rem;
   font-weight: 600;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .left__side p {
   font-size: 1.5rem;
-  color: var(--gray-color);
+  color: var(--secondary-color);
   margin: 2rem 0;
 }
 
 button {
   background-color: var(--bg-color);
-  color: var(--white-color);
+  color: var(--primary-color);
   padding: 0.5rem 2rem;
-  border: solid 1px var(--purple-color);
+  border: solid 1px var(--span-color);
+  font-family: 'Fira Code', monospace;
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .left__side button:hover {
-  background-color: var(--purple-color);
-  border: solid 1px var(--purple-color);
+  background-color: var(--span-color);
+  border: solid 1px var(--span-color);
 }
 
 .right__side {

@@ -10,22 +10,33 @@
         :class="{ active: isOpen }"
       >
         <div class="nav__item">
-          <NuxtLink to="/" class="active"><span>#</span>home</NuxtLink>
+          <NuxtLink to="/" active-class="active" @click="handleMenu"
+            ><span>#</span>home</NuxtLink
+          >
         </div>
         <div class="nav__item">
-          <NuxtLink to="/works"><span>#</span>works</NuxtLink>
+          <NuxtLink to="/works" active-class="active" @click="handleMenu"
+            ><span>#</span>works</NuxtLink
+          >
         </div>
         <div class="nav__item">
-          <NuxtLink to="/about"><span>#</span>about-me</NuxtLink>
+          <NuxtLink to="/about" active-class="active" @click="handleMenu"
+            ><span>#</span>about-me</NuxtLink
+          >
         </div>
         <div class="nav__item">
-          <NuxtLink to="/contacts"><span>#</span>contact-me</NuxtLink>
+          <NuxtLink to="/contacts" active-class="active" @click="handleMenu"
+            ><span>#</span>contact-me</NuxtLink
+          >
+        </div>
+        <div class="nav__item switch">
+          <ButtonSwitch />
         </div>
       </div>
     </Transition>
     <div class="burger__menu" @click="handleMenu">
-      <Icon v-if="!isOpen" name="mdi:menu" />
-      <Icon v-else name="mdi:close" />
+      <Icon v-if="!isOpen" name="solar:hamburger-menu-broken" />
+      <Icon v-else name="solar:close-circle-broken" />
     </div>
   </div>
 </template>
@@ -35,13 +46,13 @@ const notMobile = ref(true);
 const isOpen = ref(false);
 
 function handleMenu() {
-  if (window.innerWidth <= 500) {
+  if (window.innerWidth <= 550) {
     isOpen.value = !isOpen.value;
   }
 }
 
 function handleResize() {
-  notMobile.value = window.innerWidth > 500;
+  notMobile.value = window.innerWidth > 550;
 
   if (notMobile.value) {
     isOpen.value = false;
@@ -49,7 +60,7 @@ function handleResize() {
 }
 
 onMounted(() => {
-  notMobile.value = window.innerWidth > 500;
+  notMobile.value = window.innerWidth > 550;
 
   window.addEventListener('resize', handleResize);
 });
@@ -72,13 +83,14 @@ onBeforeMount(() => {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background 0.3s, color 0.3s;
 }
 
 .nav__logo {
   font-size: 1.5rem;
 }
 .nav__logo a {
-  color: white;
+  color: var(--primary-color);
 }
 
 .nav__link {
@@ -87,7 +99,11 @@ onBeforeMount(() => {
 }
 
 .nav__item .active {
-  color: white;
+  color: var(--primary-color);
+}
+
+.burger__menu span {
+  color: var(--primary-color);
 }
 
 .burger__menu {
@@ -123,7 +139,7 @@ onBeforeMount(() => {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .nav__link {
     display: none;
   }
@@ -148,8 +164,12 @@ onBeforeMount(() => {
     font-size: 2rem;
     cursor: pointer;
   }
-  .burger__menu span {
-    color: white;
+
+  .nav__item.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
   }
 }
 </style>

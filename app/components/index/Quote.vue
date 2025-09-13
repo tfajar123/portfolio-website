@@ -27,13 +27,13 @@
 .quote__container {
   display: inline-block;
   text-align: end;
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 .quote__text {
   margin-top: 10rem;
   position: relative;
-  border: solid 1px var(--gray-color);
+  border: solid 1px var(--secondary-color);
   padding: 2rem 3rem;
 }
 
@@ -55,7 +55,7 @@
 
 .author {
   width: fit-content;
-  border: solid 1px var(--gray-color);
+  border: solid 1px var(--secondary-color);
   padding: 1rem;
   float: right;
 }

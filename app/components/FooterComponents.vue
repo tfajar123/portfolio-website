@@ -10,7 +10,7 @@
             <a href="mailto:tfajar321321@gmail.com">tfajar321321@gmail.com</a>
           </div>
         </div>
-        <p>Fullstack Developer</p>
+        <p class="footer__job">Fullstack Developer</p>
       </div>
       <div class="footer__right">
         <p>Media</p>
@@ -27,27 +27,28 @@
           </div>
           <div class="media__item">
             <a href="https://www.instagram.com/tfk_drn/" target="_blank">
-              <Icon name="logos:instagram-icon" />
+              <Icon name="simple-icons:instagram" />
             </a>
           </div>
         </div>
       </div>
     </div>
     <div class="footer__copyright">
-      <p>© 2023 TFM. All rights reserved.</p>
+      <p>© 2025 Taufik Fajar. All rights reserved. | Design by Elias</p>
     </div>
   </footer>
 </template>
 
 <script setup></script>
 
-<style>
+<style scoped>
 footer {
   width: 100%;
-  border-top: 1px solid var(--gray-color);
+  border-top: 1px solid var(--secondary-color);
   padding: 0 10rem;
   background-color: var(--bg-color);
-  color: var(--white-color);
+  color: var(--primary-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 .footer__main {
@@ -61,9 +62,14 @@ footer {
   display: flex;
   gap: 2rem;
 }
-.footer__left p {
-  margin-top: 1rem;
-  color: var(--white-color);
+
+.footer__job {
+  padding-top: 0.5rem;
+  color: var(--primary-color);
+}
+
+span {
+  color: var(--secondary-color);
 }
 
 .footer__right {
@@ -76,6 +82,28 @@ footer {
   display: flex;
   gap: 1rem;
   font-size: 1rem;
-  color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.footer__copyright {
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0 1rem;
+  }
+
+  .footer__main {
+    flex-direction: column;
+  }
+
+  .footer__right p {
+    display: none;
+  }
+  .footer__right {
+    padding-top: 2rem;
+  }
 }
 </style>
